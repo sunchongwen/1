@@ -1,10 +1,101 @@
-<!DOCTYPE html>
-<html lang="en">
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="UTF-8">
-    <title>git index pages</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="jquery,jquery博客,jquery吧,jquery插件,jquery 特效,jquery 教程,jquery 效果,jquery ui,前端开发,web前端,web前端开发,天外飞仙,前端资源,html+CSS,JavaScript,html5,css3,css,css学习,css教程,浏览器兼容,php" />
+<meta name="description" content="jQuery吧,Write Less, Do More,重注前端开发,web前端开发" />
+<link rel="shortcut icon" href="http://www.jqueryba.com/favicon.ico" type="image/x-icon"/>
+<title>chongwen pages</title>
+<link href="css/default.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/garden.js"></script>
+<script type="text/javascript" src="js/functions.js"></script>
+
 </head>
+
 <body>
-  <h1>hello world !!!</h1>
+
+<div id="mainDiv">
+	<div id="content">
+		<div id="code">
+			<span class="comments">/**</span><br />
+			<span class="space"/><span class="comments">*This webpage made at 2017-10-01,Mr Sun = <span class="keyword">Mr</span> Noob</span><br />
+			<span class="space"/><span class="comments">*/</span><br />
+			<span class="keyword">//一杯敬朝阳，一杯敬月光</span><br /><br />
+			<span class="placeholder"/><span class="comments">唤醒我的向往，温柔了寒窗 </span><br /><br />
+			<span class="placeholder"/><span class="comments">于是可以不回头的逆风飞翔.</span><br /><br />
+			<span class="placeholder"/><span class="comments">不怕心头有雨，眼底有霜</span><br /><br />
+			<span class="keyword">//一杯敬故乡，一杯敬远方 </span><br /><br />
+			<span class="placeholder"/><span class="comments">守着我的善良，催着我成长</span><br /><br />
+			<span class="placeholder"/><span class="comments">所以南北的路从此不再漫长</span><br /><br />
+			<span class="placeholder"/><span class="comments">灵魂不再无处安放</span><br /><br />
+			<span class="keyword">//一杯敬明天，一杯敬过往</span><br /><br />
+			<span class="placeholder"/><span class="comments">支撑我的身体,厚重了肩膀</span><br /><br />
+			<span class="placeholder"/><span class="comments">虽然从不相信所谓山高水长</span><br /><br />
+			<span class="placeholder"/><span class="comments">人生苦短何必念念不忘</span><br /><br />
+			<span class="keyword">//一杯敬自由，一杯敬死亡</span> <br /><br />
+			<span class="placeholder"/><span class="comments"> 宽恕我的平凡，驱散了迷惘</span><br /><br />
+			<span class="placeholder"/><span class="comments"> 好吧天亮之后总是潦草离场</span><br /><br />
+			<span class="placeholder"/><span class="comments">清醒的人最荒唐</span><br /><br />
+			
+			<span class="placeholder"/><span class="placeholder"/>   消愁<br /><br />
+			<span class="placeholder"/> ----毛不易<br />
+		</div>
+		<div id="loveHeart">
+			<canvas id="garden"></canvas>
+			<div id="words">
+				<div id="messages">
+					这是我来加拿大的时间。
+					<div id="elapseClock"></div>
+				</div>
+				<div id="loveu">
+					挺无聊的。<br/>
+					<div class="signature">- 崇文</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+var offsetX = $("#loveHeart").width() / 2;
+var offsetY = $("#loveHeart").height() / 2 - 55;
+var together = new Date();
+together.setFullYear(2017,10, 01);
+together.setHours(0);
+together.setMinutes(0);
+together.setSeconds(0);
+together.setMilliseconds(0);
+
+if (!document.createElement('canvas').getContext) {
+	var msg = document.createElement("div");
+	msg.id = "errorMsg";
+	msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+	document.body.appendChild(msg);
+	$("#code").css("display", "none")
+	$("#copyright").css("position", "absolute");
+	$("#copyright").css("bottom", "10px");
+	document.execCommand("stop");
+} else {
+	setTimeout(function () {
+		startHeartAnimation();
+	}, 5000);
+
+	timeElapse(together);
+	setInterval(function () {
+		timeElapse(together);
+	}, 1000);
+
+	adjustCodePosition();
+	$("#code").typewriter();
+}
+</script>
+<div style="text-align:center;clear:both">
+
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fb7679a05ae7af02a48583ca79a7c992c' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</div>
 </body>
 </html>
